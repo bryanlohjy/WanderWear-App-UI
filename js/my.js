@@ -1,27 +1,24 @@
+// Clothing Slider Centering
+
 $(window).load(function(){
     var windowH = $(window).height();
-    var wrapperH = $('#window-height-wrapper').height();
+    var clothingH = $('#clothing-container').height();
+    var remainderH = (windowH-clothingH)/2;
+
+    $('#clothing-container').css('padding-top',remainderH+'px');
+   
     
-    if(windowH != wrapperH) {                            
-        $('#window-height-wrapper').css('height',windowH+'px');
-        $('#map').css('height',windowH+'px');
-        //$('#window-height-map').css('height',windowH+'px');
-        // $('#window-height-outcome').css('height',windowH+'px');
-        // $('#window-height-clothing').css('height',windowH+'px');
-        
-    }           
 
     $(window).resize(function(){
         var windowH = $(window).height();
-        var wrapperH = $('#window-height-wrapper').height();
-        var differenceH = windowH - wrapperH;
-        var newH = wrapperH + differenceH;
-        var truecontentH = $('window-height-content').height();
-        
-        if(windowH != truecontentH) {
-            $('#window-height-wrapper').css('height', (newH)+'px');
-            $('#map').css('height', (newH)+'px');
-        }
+        var clothingH = $('#clothing-container').height();
+        var remainderH = (windowH - clothingH)/2;
+
+        $('#clothing-container').css('padding-top',remainderH+'px');
 
     })          
 });
+
+
+
+

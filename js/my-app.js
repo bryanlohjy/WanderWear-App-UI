@@ -9,7 +9,7 @@ var $$ = Dom7;
 
 // Add view
 var mainView = myApp.addView('.view-main', {
-    domCache: true,
+    domCache:true
 });
 
 // Init slider and store its instance in mySwiper variable
